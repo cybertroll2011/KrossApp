@@ -1,0 +1,35 @@
+.contact__intro-background{
+    width: 100%;
+    height: 500px;
+    background-image: url(../../Assets/Images/ContactPage/contact__intro-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.contact__intro{
+    display: flex;
+    align-items: center;
+    height: 500px;
+    padding-left: 25%;
+}
+.contact .contact-info{
+    margin-top: 0;
+}
+
+@media( max-width: 768px ){
+    .contact__intro-background,
+    .contact__intro{
+        height: 300px;
+    }
+}
+@media( max-width: 545px ){
+    .contact__intro-background,
+    .contact__intro{
+        height: 200px;
+    }
+    .contact__intro{
+        padding-left: 5%;
+    }
+}

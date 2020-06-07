@@ -1,0 +1,220 @@
+.portfolio {
+    margin-top: 120px;
+}
+.portfolio-mg {
+    margin-top: 180px;
+
+    .portfolio__items {
+        margin-top: 100px;
+    }
+}
+.portfolio__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 85px;
+}
+
+.portfolio__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    height: 280px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 70px 70px rgba(0, 0, 255, .1);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    .portfolio__item-img {
+        width: 100%;
+        min-height: 100%;
+        transition: 0.2s ease;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: 0.2s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &::after {
+        content: "View project";
+        width: 50%;
+        height: auto;
+        padding: 5px 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #000;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: 0.2s ease;
+        position: absolute;
+        top: 45%;
+        z-index: 2;
+    }
+
+    &:hover .portfolio__item-img {
+        transform: scale(1.1);
+    }
+
+    &:hover::before,
+    &:hover::after {
+        opacity: 1;
+    }
+}
+
+// modal window
+
+.portfolio__modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    outline: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+}
+.portfolio__modal-inner {
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+}
+.portfolio__modal-title {
+    font-size: 32px;
+    font-weight: bold;
+}
+.portfolio__modal-author {
+    margin-bottom: 25px;
+    color: #444444;
+}
+.portfolio__modal-img {
+    img {
+        max-width: 100%;
+    }
+}
+
+.portfolio__modal-left,
+.portfolio__modal-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+// buttons
+
+.portfolio__modal-close,
+.portfolio__modal-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    font-size: 50px;
+    transition: 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.portfolio__modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .bi-x {
+        fill: #7d7d7d;
+        transition: 0.2s ease;
+        pointer-events: none;
+    }
+
+    &:hover .bi-x {
+        fill: #fff;
+    }
+}
+
+.portfolio__modal-nav {
+    .bi-chevron-right,
+    .bi-chevron-left {
+        fill: #7d7d7d;
+        transition: 0.2s ease;
+        pointer-events: none;
+    }
+}
+.portfolio__modal-prev {
+    left: 0;
+
+    &:hover .bi-chevron-left {
+        fill: #fff;
+    }
+}
+.portfolio__modal-next {
+    right: 0;
+
+    &:hover .bi-chevron-right {
+        fill: #fff;
+    }
+}
+
+.no-visible{
+    opacity: 0;
+    cursor: auto;
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        margin-top: 75px;
+    }
+    .portfolio-mg {
+        margin-top: 100px;
+    }
+    .portfolio__item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 545px) {
+    .portfolio,
+    .portfolio-mg {
+        margin-top: 50px;
+
+        .portfolio__items {
+            margin-top: 50px;
+        }
+    }
+    .portfolio__item {
+        height: 200px;
+    }
+    .portfolio__modal-inner {
+        padding: 10px;
+    }
+    .portfolio__modal-close,
+    .portfolio__modal-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 35px;
+    }
+}

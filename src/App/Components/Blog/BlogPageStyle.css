@@ -1,0 +1,38 @@
+.blog-page__intro-background {
+  width: 100%;
+  height: 500px;
+  background-image: url(../../Assets/Images/BlogPage/blog-background.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.blog__intro {
+  height: 500px;
+  padding-top: 300px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .blog__intro-background,
+  .blog__intro {
+    height: 300px;
+  }
+
+  .blog__intro {
+    padding-top: 150px;
+  }
+}
+@media (max-width: 545px) {
+  .blog__intro-background,
+  .blog__intro {
+    height: 200px;
+  }
+
+  .blog__intro {
+    padding-top: 100px;
+  }
+}
+/*# sourceMappingURL=BlogPageStyle.css.map */

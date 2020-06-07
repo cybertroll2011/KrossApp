@@ -1,0 +1,33 @@
+.about__intro-background{
+    width: 100%;
+    height: 500px;
+    background-image: url(../../Assets/Images/About/about__ingo-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.about__intro{
+    padding-top: 360px;
+    text-align: left;
+}
+
+@media( max-width: 768px ){
+    .about__intro-background,
+    .about__intro{
+        height: 300px;
+    }
+    .about__intro{
+        padding-top: 160px;
+    }
+}
+@media( max-width: 545px ){
+    .about__intro-background,
+    .about__intro{
+        height: 200px;
+    }
+    .about__intro{
+        padding-top: 100px;
+    }
+}

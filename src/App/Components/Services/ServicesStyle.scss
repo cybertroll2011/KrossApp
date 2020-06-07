@@ -1,0 +1,127 @@
+.services{
+    margin-top: 100px;
+}
+.services__items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.services__item{
+    width: 33.3333%;
+    padding: 90px 50px 75px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: .4s ease;
+}
+.services__item-title{
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 22px;
+}
+.services__item-text{
+    color: #7F7F7F;
+    font-size: 15px;
+}
+.services__item-figures-wrapper{
+    width: 55px;
+    height: 40px;
+    margin: 0 auto 50px;
+    overflow: hidden;
+    position: relative;
+}
+.triangle{
+    width: 40px;
+    height: 40px;
+    background-color: #F3F3F3;
+    transform: rotate(45deg);
+    transition: .2s ease;
+    position: absolute;
+    z-index: 2;
+    bottom: -50%;
+    left: 13%;
+}
+.triangle-rotated{
+    background-color: #D0D0D0;
+    transform: rotate(220deg);
+    bottom: -9%;
+    left: -55%;
+}
+.circle{
+    width: 37px;
+    height: 37px;
+    background-color: transparent;
+    border: 2px solid #4B2D94;
+    border-radius: 50%;
+    transition: .2s ease;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    z-index: 2;
+}
+.square{
+    width: 35px;
+    height: 35px;
+    background-color: #F3F3F3;
+    transition: .2s ease;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+}
+
+.services__item-active{
+    background-color: #41228E;
+
+    .services__item-title{
+        color: #fff;
+    }
+    .services__item-text{
+        color: #D2CEE1;
+    }
+    .triangle{
+        background-color: #fff;
+    }
+    .circle{
+        border-color: #7F60CC;
+        transform: translateX(-18px);
+    }
+    .square-moved{
+        transform: translateX(13px);
+    }
+}
+
+@media( max-width: 768px ){
+    .services__item{
+        padding: 60px 20px 55px;
+    }
+    .services__item-title{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .services__item-text{
+        font-size: 14px;
+    }
+}
+
+@media( max-width: 545px ){
+    .services{
+        margin-top: 50px;
+    }
+    .services__items{
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .services__item{
+        width: 85%;
+        margin: 0 auto 25px;
+        padding: 30px 20px;
+    }
+    .services__item-title{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .services__item-text{
+        font-size: 14px;
+    }
+}

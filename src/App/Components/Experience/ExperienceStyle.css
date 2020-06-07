@@ -1,0 +1,49 @@
+.experience {
+  margin-top: 150px;
+}
+
+.experience__items {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.experience__item {
+  width: 30%;
+}
+
+.experience__item-term {
+  margin-top: 45px;
+  color: #000;
+  font-size: 18px;
+}
+
+.experience__item-position {
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.experience__item-company {
+  color: #B8B8B8;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 545px) {
+  .experience__items {
+    margin-top: 50px;
+  }
+
+  .experience__item-term {
+    font-size: 14px;
+  }
+
+  .experience__item-position {
+    font-size: 16px;
+  }
+
+  .experience__item-company {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=ExperienceStyle.css.map */

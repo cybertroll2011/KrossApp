@@ -1,0 +1,52 @@
+.education{
+    margin-top: 220px;
+    background-image: url(../../Assets/Images/Education/education-bg.png);
+    background-size: cover;
+}
+.education__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.education__item{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 85px;
+    // border: 1px solid black;
+    text-align: left;
+}
+.education__item-left{
+    margin-right: 70px;
+}
+.education__item-year{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.education__item-speciality{
+    font-size: 22px;
+}
+.education__item-university{
+    color: #B8B8B8;
+    font-size: 18px;
+}
+
+@media( max-width: 768px ){
+    .education{
+        margin-top: 150px;
+    }
+    .education__item{
+        width: 80%;
+        margin: 0 auto 85px;
+    }
+}
+@media( max-width: 545px ){
+    .education__item-left{
+        margin-right: 35px;
+    }
+    .education__item{
+        width: 100%;
+        margin: 0 auto 55px;
+    }
+}
